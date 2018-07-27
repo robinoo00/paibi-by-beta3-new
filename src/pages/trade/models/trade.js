@@ -55,10 +55,19 @@ export default {
                 if (data.信息 === 'api error') {
                     window.toast('交易失败')
                 } else {//交易成功
+                    document.getElementById('trade-video').play();//来段music
                     yield put({
                         type:'getPingNum'
                     })
-                    window.toast(data.信息)
+                    if(data.信息.length > 4){
+                        Modal.alert('止损止盈',data.信息,[
+                            {text:'我已知晓',onPress:() => {
+
+                            }}
+                        ])
+                    }else{
+                        window.toast(data.信息)
+                    }
                 }
             } else {
                 window.toast('交易失败')

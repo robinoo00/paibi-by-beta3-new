@@ -88,10 +88,16 @@ em, i {
 
 
 /*antd-mobile reset begin*/
+.am-list-header{
+    background-color: #20212b !important;
+    color: #fff !important;
+}
+.trade-list-wrap .am-list-extra{
+    padding-bottom: 0 !important;
+}
 .fund-list .am-list-extra{
     flex: 1 !important;
 }
-
 .tradelist-tab-wrap .am-tabs-tab-bar-wrap{
     position: fixed;
     width: 100%;
@@ -125,6 +131,9 @@ em, i {
 .am-list-item .am-list-line .am-list-extra{
     font-size: .13rem !important;
     text-overflow: initial;
+}
+.myinfo .am-list-item .am-list-line .am-list-extra{
+    overflow: visible !important;
 }
 .am-list-body{
     border: none !important;

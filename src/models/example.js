@@ -11,7 +11,8 @@ export default {
             return history.listen(({pathname,query}) => {
                 const key = localStorage.getItem(config.KEY);
                 const cid = localStorage.getItem(config.CID);
-                if(pathname !== '/'&& pathname !== '/register' && pathname !== '/login' && pathname !== '/test'){
+                const {NoTokenPages} = config;
+                if(!NoTokenPages.includes(pathname)){
                     if(!key || !cid){
                         router.push('/login')
                     }

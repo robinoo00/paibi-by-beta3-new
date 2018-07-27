@@ -8,10 +8,10 @@ const Money = ({info}) => (
     <div styleName="money-wrap">
         <img src={bg1} alt="" styleName="bg1"/>
         <img src={bg2} alt="" styleName="bg2"/>
-        <div styleName="last">USDT余额：{info.可用资金}</div>
+        <div styleName="last">余额：{info.可用资金}</div>
         <div styleName="extra">
-            <span styleName="topup" onClick={() => router.push('payType')}>充币</span>
-            <span styleName="get" onClick={() => router.push('withdraw')}>提币</span>
+            <span styleName="topup" onClick={() => router.push('payType')}>充值</span>
+            <span styleName="get" onClick={() => router.push('withdraw')}>提现</span>
         </div>
     </div>
 )

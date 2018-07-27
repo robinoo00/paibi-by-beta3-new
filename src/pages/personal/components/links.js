@@ -6,7 +6,7 @@ import router from 'umi/router'
 const Links = () => (
     <div styleName="links-wrap">
         <ul styleName="links">
-            <li onClick={() => router.push('service')}>
+            <li onClick={() => router.push('helpCenter')}>
                 联系客服
                 <img src={icon} alt=""/>
             </li>

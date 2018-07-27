@@ -64,6 +64,21 @@ export default {
             nomore: false,
             empty: false
         },
+        limit_earn: {
+            inputs:[
+                {
+                    text:'手数',placeholder:'请输入手数',name:'qty'
+                },
+                {
+                    text:'止损点',placeholder:'请输入止损点',name:'slprice'
+                },
+                {
+                    text:'止盈点',placeholder:'请输入止盈点',name:'tpprice'
+                },
+            ],
+            data:{},
+            visible:false
+        }
     },
     subscriptions: {
         setup({dispatch, history}) {
@@ -167,6 +182,33 @@ export default {
                 loading = true;
             }
         },
+        *cancel({orderID},{call,put}){
+            const {data} = yield call(TradeListServices.cancel,{orderID:orderID});
+            if(data){
+                Toast.info(data.信息)
+                if(data.状态){
+                    yield put({
+                        type:'cancelOrder',
+                        orderID:orderID
+                    })
+                }
+            }
+        },
+        *limitEarn({qty,tpprice=0,slprice=0},{call,select}){
+            const item = yield select(state => state.tradeList.limit_earn.data)
+            const post_data = {
+                symbol:item.合约,
+                buysell:item.方向,
+                qty:qty,
+                tpprice:tpprice,
+                slprice:slprice,
+            }
+            const {data} = yield call(TradeListServices.limitEarn,post_data)
+            console.log(data);
+            if(data){
+                Toast.info(data.信息,1);
+            }
+        }
     },
 
     reducers: {
@@ -243,7 +285,44 @@ export default {
             return {
                 ...state,
             }
+        },
+        cancelOrder(state, {orderID}) {
+            let undeal_list = state.undeal_list;
+            const list = undeal_list.list;
+            let empty = undeal_list.empty;
+            for (let index in list) {
+                if (list[index].单号 === orderID) {
+                    list.splice(index, 1);
+                }
+            }
+            if(list.length === 0){
+                empty = true;
+                undeal_list.empty = empty;
+            }
+            undeal_list.list = [...list];
+            return {
+                ...state,
+                undeal_list:{...undeal_list}
+            }
+        },
+        showLimitEarn(state, {data}){
+            return {
+                ...state,
+                limit_earn:{
+                    ...state.limit_earn,
+                    data:data,
+                    visible:true
+                }
+            }
+        },
+        hideLimitEarn(state,{}){
+            return {
+                ...state,
+                limit_earn:{
+                    ...state.limit_earn,
+                    visible:false
+                }
+            }
         }
-    },
-
+    }
 };

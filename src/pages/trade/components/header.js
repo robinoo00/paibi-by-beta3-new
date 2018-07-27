@@ -21,8 +21,8 @@ const TradeHeader = ({code_name, list, code}) => {
                     data={list} cols={1}>
                     <div>{code_name}</div>
                 </Picker>}
-                // rightText={'规则'}
-                // rightCallBack={() => {router.push({pathname:'/tradeRule'})}}
+                rightText={'规则'}
+                rightCallBack={() => {router.push({pathname:'/tradeRule'})}}
                 leftCallBack={() => {
                     router.push({pathname: '/home'})
                 }}

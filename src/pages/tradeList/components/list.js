@@ -3,7 +3,7 @@ import Empty from './empty'
 import Loading from '../../../components/loading-nomore/bottom-tip'
 
 const TotalList = ({...rest}) => (
-    <div style={{marginTop:'163px'}}>
+    <div style={{marginTop:'163px'}} className={'trade-list-wrap'}>
         {(!rest.empty && rest.list.length ===0) ? <Loading/> : ''}
         {rest.empty ? <Empty/> :""}
         {rest.children}

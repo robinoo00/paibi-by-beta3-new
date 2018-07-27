@@ -3,6 +3,7 @@ import styles from '../styles/header.less'
 import router from 'umi/router'
 import {connect} from 'dva'
 import React from 'react'
+import person from '../../personal/images/person.png'
 
 class Header extends React.Component{
     componentDidMount(){
@@ -13,12 +14,12 @@ class Header extends React.Component{
         const {money} = this.props;
         return(
             <div styleName="user-info">
-                <img src='https://qhdigitaldevsh.oss-cn-shanghai.aliyuncs.com/ueditor/userPortrait.png' alt=""
-                     styleName="hastip"/>
+                <img src={person} alt=""
+                     styleName="hastip" onClick={() => {router.push('myInfo')}}/>
                 {/*<span styleName="status">未登录</span>*/}
-                <span styleName="login-in">{money} USDT</span>
+                <span styleName="login-in">余额: {money}</span>
                 <div styleName="topup" onClick={() => router.push('payType')}>
-                    充币
+                    充值
                 </div>
             </div>
         )

@@ -56,7 +56,6 @@ const mapDispatchToProps = (dispatch,props) => ({
         props.form.validateFields({force: true}, (error) => {
             if (!error) {
                 let value = props.form.getFieldsValue();
-                console.log(value);
                 const params = {
                     money:value.money,
                     alipay:value.aliAccount,

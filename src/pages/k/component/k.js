@@ -58,6 +58,7 @@ class K extends React.Component {
     }
     componentWillUnmount(){
         const {init} = this.props;
+        window.k_type_choose = '分时';
         draw.loading();
         init();
     }
@@ -105,6 +106,7 @@ class K extends React.Component {
     }
 
     chooseType = type => () => {
+        draw.reload();
         const {...rest} = this.props;
         if (rest.type_choose != type) {
             draw.loading();

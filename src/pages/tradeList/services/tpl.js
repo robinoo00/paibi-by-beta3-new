@@ -96,4 +96,24 @@ export function getOffect(values){
         body:values,
     })
 }
+//撤单(未成交)
+export function cancel(values){
+    return request(config.server + 'chedan',{
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        body:values
+    })
+}
+//止损止盈(持仓)
+export function limitEarn(values){
+    return request(config.server + 'addtpsi',{
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        body:values
+    })
+}
 

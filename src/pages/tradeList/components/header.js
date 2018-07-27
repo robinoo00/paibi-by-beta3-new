@@ -1,6 +1,6 @@
 import CSSModules from 'react-css-modules'
 import styles from '../styles/header.less'
-// import Header from '../../../components/header/header'
+import Header from '../../../components/header/header'
 import {Flex} from 'antd-mobile'
 import React from 'react'
 import {connect} from 'dva'
@@ -10,7 +10,6 @@ class TradeListHeader extends React.Component{
     componentDidMount(){
         const {info,getUserInfo} = this.props;
         if(info.empty){
-            console.log(1);
             getUserInfo()
         }
     }
@@ -18,17 +17,25 @@ class TradeListHeader extends React.Component{
         const {info} = this.props;
         return(
             <div styleName="header-wrap">
-                <div styleName="head_content">
-                    <div styleName="left">
-                        <h3 styleName="product-name">
-                            USDT
-                            <span styleName="float-money">{info.可用资金}</span>
-                        </h3>
-                    </div>
-                    <div styleName="right" onClick={() => {router.push('payType')}}>
-                        <span>充币</span>
-                    </div>
-                </div>
+                <Header
+                    title={<div styleName="product-name">
+                        余额<span styleName="float-money">{info.可用资金}</span>
+                    </div>}
+                    rightText={'充值'}
+                    rightCallBack={() => {router.push('payType')}}
+                />
+                {/*<div styleName="head_content">*/}
+                    {/*<div styleName="left">*/}
+                        {/*<i styleName="icon-back"></i>*/}
+                        {/*<h3 styleName="product-name">*/}
+                            {/*余额*/}
+                            {/*<span styleName="float-money">{info.可用资金}</span>*/}
+                        {/*</h3>*/}
+                    {/*</div>*/}
+                    {/*<div styleName="right" onClick={() => {router.push('payType')}}>*/}
+                        {/*<span>充值</span>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
                 <Flex styleName="finance-wrap">
                     <Flex.Item styleName="finance-list">
                         <p styleName="finance-txt">可用资金</p>

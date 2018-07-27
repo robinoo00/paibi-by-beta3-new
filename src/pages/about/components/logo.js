@@ -8,7 +8,6 @@ const Logo = () => (
             <img src={logo} alt="" styleName="logo"/>
         </div>
         <p styleName="det">安全、正规、专业</p>
-        <p styleName="det">数字货币交易系统</p>
     </div>
 )
 

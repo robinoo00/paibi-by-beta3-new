@@ -7,6 +7,20 @@ class Init extends Base {
         super();
     }
 
+    reload(){
+        var self = this;
+        self.分时数据 = [];
+        self.昨收 = null;
+        self.市价 = null;
+        self.最后一柱 = null;
+        self.k线柱宽度 = 6;
+        self.k线柱间隔 = 3;
+        self.开始条数 = 0;
+        self.结束条数 = 0;
+        self.第一次加载数据 = false;
+        self.数据长度 = 0;
+    }
+
     loading() {
         var self = this;
         self.画布上下文.clearRect(0, 0, self.画布宽度, self.画布高度);
@@ -56,7 +70,9 @@ class Init extends Base {
             self.第一次加载数据 = true;
             self.数据长度 = self.分时数据.length;
             window.setTimeout(function () {
-                work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                if(self.最后一柱){
+                    work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                }
             }, 500);
         } else {
             if (data.length == 0) {
@@ -96,7 +112,9 @@ class Init extends Base {
             self.第一次加载数据 = true;
             self.数据长度 = self.分时数据.length;
             window.setTimeout(function () {
-                work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                if(self.最后一柱){
+                    work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                }
             }, 500)
         }
     }
@@ -521,26 +539,23 @@ class Init extends Base {
     //十字线
     shizhi(x, y) {
         var self = this;
+        y -= self.距顶距离;
         self.kuanjia();
         var xx, yy;
         xx = x;
         yy = y;
         if (y < self.上边距) {
             yy = self.上边距;
-        }
-        ;
+        };
         if (y > self.K线区高度 - self.底边距) {
             yy = self.K线区高度 - self.底边距;
-        }
-        ;
+        };
         if (x < self.左边距 + self.左线边距) {
             xx = self.左边距 + self.左线边距
-        }
-        ;
+        };
         if (x > self.K线区宽度 - self.右边距) {
             xx = self.K线区宽度 - self.右边距
-        }
-        ;
+        };
         self.画布上下文.font = "15px sans-serif";
         self.画布上下文.save();
         self.画布上下文.beginPath();
@@ -558,6 +573,7 @@ class Init extends Base {
         self.画布上下文.save();
 
 
+        //绘制左边显示数据
         self.画布上下文.beginPath();
         self.画布上下文.fillStyle = "#000000";
         self.画布上下文.globalAlpha = 0.7;
@@ -565,14 +581,14 @@ class Init extends Base {
         self.画布上下文.stroke();
         self.画布上下文.save();
 
-        var kd = (self.K线区宽度 - self.左边距 - self.左线边距 - self.右边距) / self.K线显示柱条数;
+        var kd = (self.K线区宽度 - self.左边距 - self.左线边距 - self.右边距) / self.新数组.length;
         var 数据索引 = Math.floor((x - self.左边距 - self.左线边距) / kd);
         数据索引 = 数据索引 < 0 ? 0 : 数据索引;
         self.画布上下文.fillStyle = self.显示文本颜色;
-        self.画布上下文.fillText("开:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "开:" + self.新数组[数据索引].开盘, 10, 30);
+        self.画布上下文.fillText("开:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "开:" + self.新数组[数据索引].开盘,10,  30);
         self.画布上下文.fillText("高:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "高:" + self.新数组[数据索引].最高, 10, 60);
-        self.画布上下文.fillText("低:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "低:" + self.新数组[数据索引].最低, 10, 90);
-        self.画布上下文.fillText("收:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "收:" + self.新数组[数据索引].最低, 10, 120);
+        self.画布上下文.fillText("低:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "低:" + self.新数组[数据索引].最低, 10,90);
+        self.画布上下文.fillText("收:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "收:" + self.新数组[数据索引].最低,10,120);
         self.画布上下文.fillText("量:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "量:" + self.新数组[数据索引].量, 10, 150);
         self.画布上下文.fillStyle = self.M5颜色;
         self.画布上下文.fillText("M5:" + self.M5.length <= 0 || 数据索引 >= self.M5.length ? "-" : "M5:" + Number(self.M5[数据索引]).toFixed(2), 10, 180);
@@ -589,41 +605,7 @@ class Init extends Base {
         self.画布上下文.fillStyle = self.显示文本颜色;
         self.画布上下文.fillText("时:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "时:" + self.time4(self.新数组[数据索引].时间), 10, 360);
         self.画布上下文.save();
-
-
-        //if (self.类型 == "分时") {
-
-        //    var ww = (self.K线区宽度 - self.左边距 - self.左线边距 - self.右边距) / 555;
-        //    var 数据索引 = Math.floor((x - self.左边距 - self.左线边距) / ww);
-        //    数据索引 = 数据索引 < 0 ? 0 : 数据索引;
-
-
-        //    self.画布上下文.fillText("市:" + self.分时数据.length <= 0 || 数据索引 >= self.分时数据.length ? "-" : "市价:" + self.分时数据[数据索引].收盘, self.左边距 + self.左线边距, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("量:" + self.分时数据.length <= 0 || 数据索引 >= self.分时数据.length ? "-" : "量:" + self.分时数据[数据索引].量, self.左边距 + self.左线边距 + 100, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("均:" + self.分时数据.length <= 0 || 数据索引 >= self.分时数据.length ? "-" : "均:" + self.均线[数据索引].toFixed(2), self.左边距 + self.左线边距 + 200, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("时:" + self.分时数据.length <= 0 || 数据索引 >= self.分时数据.length ? "-" : "时:" + self.分时数据[数据索引].时间, self.左边距 + self.左线边距 + 300, self.K线区高度 + 30);
-        //} else {
-
-        //    var kd = (self.K线区宽度 - self.左边距 - self.左线边距 - self.右边距) / self.新数组.length;
-        //    var 数据索引 = Math.floor((x - self.左边距 - self.左线边距) / kd);
-        //    数据索引 = 数据索引 < 0 ? 0 : 数据索引;
-        //    self.画布上下文.fillStyle = self.显示文本颜色;
-        //    self.画布上下文.fillText("开:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "开:" + self.新数组[数据索引].开盘, self.左边距 + self.左线边距, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("高:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "高:" + self.新数组[数据索引].最高, self.左边距 + self.左线边距 + 100, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("低:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "低:" + self.新数组[数据索引].最低, self.左边距 + self.左线边距 + 200, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("收:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "收:" + self.新数组[数据索引].最低, self.左边距 + self.左线边距 + 300, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("量:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "量:" + self.新数组[数据索引].量, self.左边距 + self.左线边距 + 400, self.K线区高度 + 30);
-        //    self.画布上下文.fillText("时:" + self.新数组.length <= 0 || 数据索引 >= self.新数组.length ? "-" : "时:" + self.time4(self.新数组[数据索引].时间), self.左边距 + self.左线边距 + 500, self.K线区高度 + 30);
-
-        //    self.画布上下文.fillStyle = self.M5颜色;
-        //    self.画布上下文.fillText(self.M5[数据索引], self.左边距 + self.左线边距 + 45, 30);
-        //    self.画布上下文.fillStyle = self.M10颜色;
-        //    self.画布上下文.fillText(self.M10[数据索引], self.左边距 + self.左线边距 + 150 + 55, 30);
-        //    self.画布上下文.fillStyle = self.M15颜色;
-        //    self.画布上下文.fillText(self.M15[数据索引], self.左边距 + self.左线边距 + 300 + 55, 30);
-        //    self.画布上下文.save();
-        //}
-
-    }}
+    }
+}
 
 export default Init

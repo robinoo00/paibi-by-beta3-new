@@ -5,15 +5,16 @@ import {Toast} from 'antd-mobile'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {connect} from 'dva'
 import config from "../utils/config";
-import lconfig from './config'
 
 class Layout extends React.Component{
     componentWillMount() {//首页列表所需数据
         const {assignList,autoLogin,location} = this.props;
-        if(location.pathname != '/register' && location.pathname != '/login'){
+        const {NoAutoLogin} = config;
+        if(!NoAutoLogin.includes(location.pathname)){
             autoLogin();
         }
         window.work.client.GetFSData = function (data) {
+            // console.log(JSON.parse(data))
             assignList(JSON.parse(data))
             sessionStorage.setItem(config.K_DATA_LIST, data);
         };
@@ -56,7 +57,7 @@ class Layout extends React.Component{
     render(){
         const {children,location} = this.props;
         const pathname = location.pathname;
-        const { openPages } = lconfig;
+        const { HasFooterPages } = config;
         // const has_foot = pathname === '/news' || pathname === '/discover' || pathname === '/personal';
         return (
             <ReactCSSTransitionGroup
@@ -69,7 +70,7 @@ class Layout extends React.Component{
                     <div>
                         {children}
                     </div>
-                    {openPages && openPages.includes(pathname) ? <Footer/> : ''}
+                    {HasFooterPages && HasFooterPages.includes(pathname) ? <Footer/> : ''}
                     {/*{has_foot ? <Footer/> : ''}*/}
                 </div>
             </ReactCSSTransitionGroup>

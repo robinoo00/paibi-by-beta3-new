@@ -5,6 +5,7 @@ import {Modal} from 'antd-mobile'
 import config from '../../../utils/config'
 import React from 'react'
 import {Toast, Flex} from 'antd-mobile'
+import Tip from '../images/tip.wav'
 
 const prompt = Modal.prompt;
 
@@ -31,6 +32,7 @@ class Btns extends React.Component {
         const {...rest} = this.props;
         return (
             <Flex styleName="wrap">
+                <video id={"trade-video"} src={Tip} style={{display:'none'}}></video>
                 <Flex.Item styleName="buy"
                            onClick={rest.price_type === 1 ? rest.ifSwitch('确定买入？', rest.buy()) : rest.limitOrder('买入' + rest.num + '手',rest.data.最新价, rest.buy())}>
                     买 {rest.data.买价}
@@ -97,7 +99,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         )
     },
     ifSwitch: (title, callback) => () => {
-        if (sessionStorage.getItem(config.TRADE_SWITCH) === null || sessionStorage.getItem(config.TRADE_SWITCH) === "true") {
+        if (localStorage.getItem(config.TRADE_SWITCH) === null || localStorage.getItem(config.TRADE_SWITCH) === "true") {
             Modal.alert(title, '', [
                 {
                     text: '取消', onPress: () => {

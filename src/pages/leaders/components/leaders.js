@@ -2,7 +2,7 @@ import Header from './header'
 import Tabs from './tabs'
 
 const Leaders = () => (
-    <div>
+    <div className={'page-main'}>
         <Header/>
         <Tabs/>
     </div>

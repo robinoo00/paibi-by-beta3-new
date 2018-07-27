@@ -1,9 +1,16 @@
+.header-up:after{
+    content:'\e6aa';
+    font-family: iconfont;
+}
+.header-down:after{
+    content:'\e6b0';
+    font-family: iconfont;
+}
 .mod-trade-rule{
-    padding: 0 .15rem;
     background: #262834;
 }
-.mod-trade-rule .wrap{
-    padding: 0 0 .15rem;
+.wrap{
+    padding: 0 .15rem .15rem .15rem;
 }
 .pt10 {
     padding-top: .1rem;

@@ -9,10 +9,9 @@ const Banner = () => {
     return (
         <div>
             <Carousel
-                autoplay={false}
+                autoplay={true}
                 infinite
-                beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                afterChange={index => console.log('slide to', index)}
+                autoplayInterval={5000}
             >
                 {banner.map(val => (
                     <a
@@ -26,7 +25,7 @@ const Banner = () => {
                             style={{ width: '100%', verticalAlign: 'top',height:'1.13rem' }}
                             onLoad={() => {
                                 // fire window resize event to change height
-                                // window.dispatchEvent(new Event('resize'));
+                                window.dispatchEvent(new Event('resize'));
                             }}
                         />
                     </a>

@@ -1,12 +1,14 @@
 import CSSModules from 'react-css-modules'
 import styles from '../styles/position-list.less'
-import {Flex, Modal} from 'antd-mobile'
+import {Flex, Modal, List, Button,InputItem} from 'antd-mobile'
 import {connect} from 'dva'
 import React from 'react'
 import AlertItem from './ping-check-alert'
+import LimitEarn from './limit-earn'
 
 const PositionList = ({...rest}) => (
     <div styleName="wrap">
+        <LimitEarn/>
         {rest.list.map((item, index) => (
             <div styleName="item" key={"tradeList_" + index}>
                 <div styleName="line1">
@@ -24,12 +26,13 @@ const PositionList = ({...rest}) => (
                     <div styleName="action">
                         {/*<span styleName={item.浮动盈亏 > 0 ? "up-num" : "down-num"}>{item.浮动盈亏}</span>*/}
                         <span onClick={rest.pingcang(item)} styleName="ping-btn">平仓</span>
+                        <span onClick={rest.limitLose(item)} styleName="ping-btn">损盈</span>
                     </div>
                 </div>
                 <Flex styleName="price">
                     <Flex.Item styleName="price-item">
                         <p>{item.均价}</p>
-                        <p>开仓价</p>
+                        <p>均价</p>
                     </Flex.Item>
                     <Flex.Item styleName="price-item">
                         <p>{item.当前价}</p>
@@ -54,6 +57,12 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
+    limitLose: item => () => {
+        dispatch({
+            type:'tradeList/showLimitEarn',
+            data:item
+        })
+    },
     pingcang: item => () => {
         Modal.alert('确认平仓?', <AlertItem item={item}/>, [
             {
@@ -65,8 +74,8 @@ const mapDispatchToProps = dispatch => ({
                     window.loading('交易中');
                     dispatch({
                         type: 'tradeList/ping',
-                        direction:item.方向 === "买入" ? 0 :1,
-                        code:item.合约
+                        direction: item.方向 === "买入" ? 0 : 1,
+                        code: item.合约
                     })
                 }
             }

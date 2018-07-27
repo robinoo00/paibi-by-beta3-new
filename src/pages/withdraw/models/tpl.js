@@ -1,6 +1,6 @@
 import * as WithDrawServices from '../services/tpl'
 import config from '../../../utils/config'
-import {Toast} from 'antd-mobile'
+import {Toast,Modal} from 'antd-mobile'
 import router from 'umi/router'
 
 export default {
@@ -25,12 +25,28 @@ export default {
             Toast.loading('提交中',0);
             const {data} = yield call(WithDrawServices.withdraw,{pass,money})
             if(data){
-                Toast.info(data.信息,2);
-                if(data.状态){
-                    setTimeout(() => {
-                        router.push({pathname:'/personal'})
-                    },2000)
+                Toast.hide();
+                if (data.状态) {
+                    Modal.alert('', '申请出金成功，将在二小时内出金至您的银行卡,请勿重复申请', [
+                        {
+                            text: '确定', onPress: () => {
+                                router.push({pathname: '/personal'})
+                            }
+                        }
+                    ])
+                }else{
+                    Modal.alert('', data.信息, [
+                        {
+                            text: '确定', onPress: () => {}
+                        }
+                    ])
                 }
+                // Toast.info(data.信息,2);
+                // if(data.状态){
+                //     setTimeout(() => {
+                //         router.push({pathname:'/personal'})
+                //     },2000)
+                // }
             }
         }
     },

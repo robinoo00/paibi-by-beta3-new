@@ -32,8 +32,8 @@ const Market = ({...rest}) => (
                         <p>现量:{item.现量}</p>
                     </Flex.Item>
                     <Flex.Item styleName="show">
-                        <span styleName="btn">
-                            {item.最新价 === 0 ? '0%' : (item.最新价 - item.收盘价).toFixed(2) + '%'}
+                        <span styleName="btn" style={(item.最新价 === 0 || item.收盘价 === 0 || (item.最新价 - item.收盘价)/item.收盘价 * 100 < 0) ? {backgroundColor:'#01B28E'} : {}}>
+                            {(item.最新价 === 0 || item.收盘价 === 0) ? '0%' : ((item.最新价 - item.收盘价)/item.收盘价 * 100).toFixed(2) + '%'}
                         </span>
                     </Flex.Item>
                 </Flex>

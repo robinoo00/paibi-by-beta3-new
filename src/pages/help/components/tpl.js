@@ -51,9 +51,9 @@ class Help extends React.Component{
                         </Item>
                     ))}
                 </List>
-                <div styleName="wrap-footer">
-                    <Link to={'/helpCenter'}>没有解决问题？点此提问</Link>
-                </div>
+                {/*<div styleName="wrap-footer">*/}
+                    {/*<Link to={'/helpCenter'}>没有解决问题？点此提问</Link>*/}
+                {/*</div>*/}
             </div>
         )
     }

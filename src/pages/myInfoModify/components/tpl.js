@@ -38,7 +38,7 @@ const Example = ({...rest}) => {
                     ]
                 })}
                 type={"password"}
-                placeholder={'请输入原登录密码'}
+                placeholder={'请输入新登录密码'}
             >
                 登录密码
             </InputItem>

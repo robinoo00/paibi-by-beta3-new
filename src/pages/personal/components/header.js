@@ -1,10 +1,12 @@
 import CSSModuels from 'react-css-modules'
 import styles from '../styles/header.less'
+import person from '../images/person.png'
+import router from 'umi/router'
 
 const Header = ({info}) => (
     <div styleName="header">
-        <div styleName="img">
-            <img src="https://qhdigitaldevsh.oss-cn-shanghai.aliyuncs.com/ueditor/userPortrait.png" alt=""/>
+        <div styleName="img" onClick={() => {router.push('myInfo')}}>
+            <img src={person} alt=""/>
         </div>
         <div styleName="info">
             <div>
@@ -13,7 +15,7 @@ const Header = ({info}) => (
                 </div>
                 <div styleName="switch-wrap">
                     <div styleName="account-type">
-                        实盘账户
+                        {info.帐号}
                     </div>
                     {/*<div styleName="switch-btn">*/}
                         {/*切换至模拟账户*/}

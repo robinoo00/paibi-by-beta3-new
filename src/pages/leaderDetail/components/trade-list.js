@@ -35,7 +35,7 @@ const HistoryList = ({data}) => (
                         <span styleName="ask">{item.CloseDate.slice(0,10)}</span>
                     </p>
                 </div>
-                <div styleName="right" style={{color:item.OpenBuySell === "买入" ? "#00cf8c" : "#ff6056"}}>
+                <div styleName="right" style={{color:(item.ClosePrice - item.OpenPrice).toFixed(2) < 0 ? "#00cf8c" : "#ff6056"}}>
                     {(item.ClosePrice - item.OpenPrice).toFixed(2)}
                 </div>
             </div>

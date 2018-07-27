@@ -20,7 +20,7 @@ class Detail extends React.Component {
         return(
             <Flex styleName="detail-list">
                 <Flex.Item>
-                    <div styleName="trade-details">持仓盈亏: <span style={earn < 0 ? {color: '#01B28E'} : {color: '#E34C4D'}}>{earn}</span></div>
+                    <div styleName="trade-details">浮动盈亏: <span style={earn < 0 ? {color: '#01B28E'} : {color: '#E34C4D'}}>{earn}</span></div>
                 </Flex.Item>
                 <Flex.Item>
                     <div styleName="trade-details" onClick={() => {router.push({pathname:'/tradeList'})}}>
@@ -38,7 +38,7 @@ class Detail extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    earn: state.tradeList.earn
+    earn: state.tradeList.position_list.list.filter(item => item.合约 === state.trade.code)[0] ? state.tradeList.position_list.list.filter(item => item.合约 === state.trade.code)[0]['浮动盈亏'] : 0
 })
 
 const mapDispatchToProps = dispatch => ({

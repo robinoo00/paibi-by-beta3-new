@@ -1,5 +1,6 @@
 import {Badge} from 'antd-mobile'
 import * as FollowListServices from '../services/followList'
+import {Toast} from 'antd-mobile'
 
 export default {
     namespace:'followList',
@@ -27,10 +28,17 @@ export default {
         *getList({},{call,put}){
             const {data} = yield call(FollowListServices.getList,{});
             if(data){
-                yield put({
-                    type:'assignFollowList',
-                    data:data.data
-                })
+                if(typeof data.状态 !='undefined'){
+                    if(!data.状态){
+                        Toast.info(data.信息)
+                    }
+                }else{
+                    yield put({
+                        type:'assignFollowList',
+                        data:data.data
+                    })
+                }
+
             }
         }
     }

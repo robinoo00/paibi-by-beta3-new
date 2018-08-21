@@ -64,7 +64,7 @@ em, i {
     color: #fff;
     font-size: 14px;
     position: fixed;
-    z-index: 102;
+    z-index: 1002;
     border-radius: 8px;
     text-align: center;
 }
@@ -88,6 +88,9 @@ em, i {
 
 
 /*antd-mobile reset begin*/
+.trade-num-btn .am-flexbox .am-flexbox-item{
+    margin-left: 0 !important;
+}
 .am-list-header{
     background-color: #20212b !important;
     color: #fff !important;

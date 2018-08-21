@@ -5,10 +5,12 @@ import {connect} from 'dva'
 import React from 'react'
 import AlertItem from './ping-check-alert'
 import LimitEarn from './limit-earn'
+import router from 'umi/router'
 
 const PositionList = ({...rest}) => (
     <div styleName="wrap">
         <LimitEarn/>
+        <AlertItem/>
         {rest.list.map((item, index) => (
             <div styleName="item" key={"tradeList_" + index}>
                 <div styleName="line1">
@@ -25,7 +27,7 @@ const PositionList = ({...rest}) => (
                     </div>
                     <div styleName="action">
                         {/*<span styleName={item.浮动盈亏 > 0 ? "up-num" : "down-num"}>{item.浮动盈亏}</span>*/}
-                        <span onClick={rest.pingcang(item)} styleName="ping-btn">平仓</span>
+                        <span onClick={rest.pingcang(item,rest.ping_num)} styleName="ping-btn">平仓</span>
                         <span onClick={rest.limitLose(item)} styleName="ping-btn">损盈</span>
                     </div>
                 </div>
@@ -59,27 +61,52 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     limitLose: item => () => {
         dispatch({
-            type:'tradeList/showLimitEarn',
+            type:'limits/assignTempData',
             data:item
         })
+        router.push({pathname:'limits',query:{code:item['合约']}})
+        // dispatch({
+        //     type:'tradeList/showLimitEarn',
+        //     data:item
+        // })
     },
-    pingcang: item => () => {
-        Modal.alert('确认平仓?', <AlertItem item={item}/>, [
-            {
-                text: '取消', onPress: () => {
-                }
-            },
-            {
-                text: '确定', onPress: () => {
-                    window.loading('交易中');
-                    dispatch({
-                        type: 'tradeList/ping',
-                        direction: item.方向 === "买入" ? 0 : 1,
-                        code: item.合约
-                    })
-                }
-            }
-        ])
+    pingcang: (item) => () => {
+        dispatch({
+            type:'tradeList/showPingModal',
+            item:item
+        })
+        // Modal.alert('确认平仓?', <AlertItem
+        //     item={item}
+        //     num={ping_num}
+        //     del={()  => {
+        //         console.log('de')
+        //         dispatch({
+        //             type:'tradeList/assignPingNum',
+        //             action:'del'
+        //         })
+        //     }}
+        //     add={()  => {
+        //         dispatch({
+        //             type:'tradeList/assignPingNum',
+        //             action:'add'
+        //         })
+        //     }}
+        // />, [
+        //     {
+        //         text: '取消', onPress: () => {
+        //         }
+        //     },
+        //     {
+        //         text: '确定', onPress: () => {
+        //             window.loading('交易中');
+        //             dispatch({
+        //                 type: 'tradeList/ping',
+        //                 direction: item.方向 === "买入" ? 0 : 1,
+        //                 code: item.合约
+        //             })
+        //         }
+        //     }
+        // ])
     }
 })
 

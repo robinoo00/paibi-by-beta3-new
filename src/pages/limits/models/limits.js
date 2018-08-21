@@ -1,47 +1,49 @@
 import * as LimitServices from '../services/limits'
 import {Toast} from 'antd-mobile'
+
 let loading = false;
 
 export default {
     namespace: 'limits',
     state: {
-        caode:'',
-        nav_show:false,
-        nav_choose:'充值',
-        nav_list:[
-            {title:'充值',choose:true},
-            {title:'提现',choose:false},
-            {title:'收入',choose:false},
-            {title:'支出',choose:false},
+        code: '',
+        nav_show: false,
+        nav_choose: '充值',
+        nav_list: [
+            {title: '充值', choose: true},
+            {title: '提现', choose: false},
+            {title: '收入', choose: false},
+            {title: '支出', choose: false},
         ],
-        list:[],
-        page:0,
-        nomore:false,
+        list: [],
+        page: 0,
+        nomore: false,
+        tempdata: {},
         limit_earn: {
             inputs:[
                 {
-                    text:'手数',placeholder:'请输入手数',name:'qty'
+                    text:'手数',placeholder:'请输入手数',name:'qty',value:''
                 },
                 {
-                    text:'止损点',placeholder:'请输入止损点',name:'slprice'
+                    text:'止损价',placeholder:'请输入止损价',name:'slprice',value:''
                 },
                 {
-                    text:'止盈点',placeholder:'请输入止盈点',name:'tpprice'
+                    text:'止盈价',placeholder:'请输入止盈价',name:'tpprice',value:''
                 },
             ],
-            data:{},
-            visible:false
+            data: {},
+            visible: false,
+            visibleAdd: false,
         }
     },
     subscriptions: {
-        setup({ dispatch, history }) {
-            return history.listen(({pathname,query}) => {
-                if(pathname === '/limits'){
-                    console.log(query)
-                    if(query.code){
+        setup({dispatch, history}) {
+            return history.listen(({pathname, query}) => {
+                if (pathname === '/limits') {
+                    if (query.code) {
                         dispatch({
-                            type:'assignCode',
-                            code:query.code
+                            type: 'assignCode',
+                            code: query.code
                         })
                     }
                 }
@@ -50,7 +52,7 @@ export default {
     },
 
     effects: {
-        *getList({page =1},{call,put,select}){
+        * getList({page = 1}, {call, put, select}) {
             const code = yield select(state => state.limits.code);
             const {data} = yield call(LimitServices.getList,{page:page,symbol:code})
             loading = false;
@@ -68,32 +70,37 @@ export default {
                 })
             }
         },
-        *loadMore({},{put,select}){
-            if(!loading){
+        * loadMore({}, {put, select}) {
+            if (!loading) {
                 const page = yield select(state => state.limits.page);
                 const nomore = yield select(state => state.limits.nomore);
-                if(!nomore){
+                if (!nomore) {
                     yield put({
-                        type:'getList',
-                        page:page + 1
+                        type: 'getList',
+                        page: page + 1
                     })
                 }
                 loading = true;
             }
         },
-        *cancel({id},{call,put}){
-            const {data} = yield call(LimitServices.cancel,{tpid:id});
-            if(data){
-                Toast.info(data.信息)
-                if(data.状态){
-                    yield put({
-                        type:'cancelLimit',
-                        id:id
-                    })
-                }
+        * add({qty,tpprice=0,slprice=0}, {call, select, put}) {
+            const item = yield select(state => state.limits.tempdata)
+            const post_data = {
+                symbol:item.合约,
+                buysell:item.方向,
+                qty:qty,
+                tpprice:tpprice,
+                slprice:slprice,
+            }
+            const {data} = yield call(LimitServices.add, post_data)
+            if (data) {
+                Toast.info(data.信息,1)
+                yield put({
+                    type: 'hideLimitEarn'
+                })
             }
         },
-        *modify({qty,tpprice = 0,slprice = 0},{call,select,put}){
+        * modify({qty,tpprice = 0,slprice = 0}, {call, select, put}) {
             const item = yield select(state => state.limits.limit_earn.data)
             const post_data = {
                 symbol:item.Symbol,
@@ -103,41 +110,29 @@ export default {
                 slprice:slprice,
                 tpid:item.id
             }
-            const {data} = yield call(LimitServices.modify,post_data)
-            if(data){
-                Toast.info(data.信息,1);
+            const {data} = yield call(LimitServices.modify, post_data)
+            if (data) {
+                Toast.info(data.信息,1)
                 yield put({
-                    type:'hideLimitEarn'
+                    type: 'hideLimitEarn'
                 })
-                // if(data.状态){
-                //     yield put({
-                //         type:'getList'
-                //     })
-                // }
+            }
+        },
+        *cancel({id},{call,put}){
+            const {data} = yield call(LimitServices.cancel,{tpid:id});
+            if(data){
+                Toast.info(data.信息,1)
+                if(data.状态){
+                    yield put({
+                        type:'cancelLimit',
+                        id:id
+                    })
+                }
             }
         }
     },
 
     reducers: {
-        showLimitEarn(state, {data}){
-            return {
-                ...state,
-                limit_earn:{
-                    ...state.limit_earn,
-                    data:data,
-                    visible:true
-                }
-            }
-        },
-        hideLimitEarn(state,{}){
-            return {
-                ...state,
-                limit_earn:{
-                    ...state.limit_earn,
-                    visible:false
-                }
-            }
-        },
         cancelLimit(state,{id}){
             const list = state.list;
             for(let index in list){
@@ -150,51 +145,125 @@ export default {
                 list:[...list]
             }
         },
-        assignCode(state,{code}){
+        assignTempData(state, {data}) {
             return {
                 ...state,
-                code:code
+                tempdata: data,
             }
         },
-        assignList(state,{data,page}){
+        assignLimitEarnData(state, {data}) {
+            return {
+                ...state,
+                limit_earn: {
+                    ...state.limit_earn,
+                    data: data
+                }
+            }
+        },
+        showLimitEarnAdd(state, {}) {
+            return {
+                ...state,
+                limit_earn: {
+                    ...state.limit_earn,
+                    visibleAdd: true
+                }
+            }
+        },
+        showLimitEarn(state, {data}) {
+            return {
+                ...state,
+                limit_earn: {
+                    ...state.limit_earn,
+                    visible: true
+                }
+            }
+        },
+        assignInputsValue(state,{data = null}){
+            let inputs = state.limit_earn.inputs;
+            if(data){
+                inputs[0]['value'] = data['qty']
+                inputs[1]['value'] = data['slPrice']
+                inputs[2]['value'] = data['tpPrice']
+            }else{
+                inputs[0]['value'] = ''
+                inputs[1]['value'] = ''
+                inputs[2]['value'] = ''
+            }
+            return {
+                ...state,
+                list_earn:{
+                    ...state.limit_earn,
+                    inputs:[...inputs]
+                }
+            }
+        },
+        hideLimitEarn(state, {}) {
+            return {
+                ...state,
+                limit_earn: {
+                    ...state.limit_earn,
+                    visible: false,
+                    visibleAdd: false
+                }
+            }
+        },
+        cancelLimit(state, {id}) {
+            const list = state.list;
+            for (let index in list) {
+                if (list[index]['id'] === id) {
+                    list.splice(index, 1);
+                }
+            }
+            return {
+                ...state,
+                list: [...list]
+            }
+        },
+        assignCode(state, {code}) {
+            return {
+                ...state,
+                code: code
+            }
+        },
+        assignList(state, {data, page}) {
             let nomore = false;
-            if(data.length === 0 || data.length < 30){
+            if (data.length === 0 || data.length < 30) {
                 nomore = true;
             }
-            if(page === 1){
+            if (page === 1) {
                 return {
                     ...state,
-                    list:data,
-                    page:1,
-                    nomore:nomore
+                    list: data,
+                    page: 1,
+                    nomore: nomore
                 }
-            }else{
+            } else {
                 return {
                     ...state,
-                    list:[...state.list,...data],
-                    page:page,
-                    nomore:nomore
+                    list: [...state.list, ...data],
+                    page: page,
+                    nomore: nomore
                 }
             }
         },
-        toggleShow(state){
-            return{
+        toggleShow(state) {
+            return {
                 ...state,
-                nav_show:!state.nav_show
+                nav_show: !state.nav_show
             }
         },
-        assignChoose(state,{index}){
+        assignChoose(state, {index}) {
             let temp = [
-                {title:'充值',choose:false},
-                {title:'提现',choose:false},
-                {title:'收入',choose:false},
-                {title:'支出',choose:false},
+                {title: '充值', choose: false},
+                {title: '提现', choose: false},
+                {title: '收入', choose: false},
+                {title: '支出', choose: false},
             ];
             temp[index]['choose'] = true;
             return {
                 ...state,
-                nav_choose:temp[index]['title'],
-                nav_list:[...temp]
+                nav_choose: temp[index]['title'],
+                nav_list: [...temp]
             }
         }
     },

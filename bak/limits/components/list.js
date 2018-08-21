@@ -1,32 +1,29 @@
 import {List, Flex, Modal} from 'antd-mobile'
-import {reBuildDate, reBuildTime} from "../../../utils/common";
-// import {removeScrollListener, scrollLoadMore, reBuildDate, reBuildTime} from "../../../utils/common";
+import {removeScrollListener, scrollLoadMore, reBuildDate, reBuildTime} from "../../../utils/common";
 import React from 'react'
 import {connect} from 'dva'
-// import NoMore from '../../../components/loading-nomore/bottom-tip'
+import NoMore from '../../../components/loading-nomore/bottom-tip'
 import CSSModules from 'react-css-modules'
 import styles from '../styles/list.less'
 
 const Item = List.Item;
 const Brief = Item.Brief;
 
-let id = 0;
 
 class FundList extends React.Component {
     componentDidMount() {
         let {loadMore, getList} = this.props;
         getList();
-        id = setInterval(() => {
+        setTimeout(() => {
             getList();
-        },1000)
-        // scrollLoadMore(() => {
-        //     loadMore()
-        // })
+        },3000)
+        scrollLoadMore(() => {
+            loadMore()
+        })
     }
 
     componentWillUnmount() {
-        // removeScrollListener()
-        clearInterval(id)
+        removeScrollListener()
     }
 
     render() {
@@ -50,7 +47,7 @@ class FundList extends React.Component {
                             <div styleName="action">
                                 <span onClick={() => {
                                     rest.cancel(item)
-                                }} styleName="ping-btn">删除</span>
+                                }} styleName="ping-btn">撤回</span>
                                 <span onClick={rest.modify(item)} styleName="ping-btn">修改</span>
                             </div>
                         </div>
@@ -74,7 +71,7 @@ class FundList extends React.Component {
                         </Flex>
                     </div>
                 ))}
-                {/*<NoMore nomore={rest.nomore}/>*/}
+                <NoMore nomore={rest.nomore}/>
             </div>
         )
     }
@@ -97,7 +94,7 @@ const mapDispatchToProps = (dispatch, props) => ({
         })
     },
     cancel: (item) => {
-        Modal.alert('删除', `确认删除${item.Symbol}吗？`, [
+        Modal.alert('撤回', `确认撤回${item.Symbol}吗？`, [
             {
                 text: '取消', onPress: () => {
                 }
@@ -113,14 +110,6 @@ const mapDispatchToProps = (dispatch, props) => ({
         ])
     },
     modify: item => () => {
-        dispatch({
-            type:'limits/assignLimitEarnData',
-            data:item
-        })
-        dispatch({
-            type:'limits/assignInputsValue',
-            data:item
-        })
         dispatch({
             type:'limits/showLimitEarn',
             data:item

@@ -1,25 +1,18 @@
 import React from 'react'
 import List from './list'
-import Header from '../../../components/header/header'
-import {connect} from 'dva'
 import LimitEarn from './limit-earn'
+import LimitEarnAdd from './limit-earn-add'
+import Footer from './footer'
+import Header from './header'
 
-const Limits = ({code}) => (
+const Limits = () => (
     <div>
-        <Header
-            title={`止损止盈(${code})`}
-        />
+        <Header/>
         <List/>
+        <Footer/>
         <LimitEarn/>
+        <LimitEarnAdd/>
     </div>
 )
 
-const mapStateToProps = state => ({
-    code:state.limits.code
-})
-
-const mapDispatchToProps = dispatch => ({
-
-})
-
-export default connect(mapStateToProps,mapDispatchToProps)(Limits)
+export default Limits

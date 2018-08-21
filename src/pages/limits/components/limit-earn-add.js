@@ -1,5 +1,5 @@
 import React from 'react'
-import {Modal, List, Button,InputItem,Toast} from 'antd-mobile'
+import {Modal, List, Button,InputItem,Toast, Tag, Flex} from 'antd-mobile'
 import {connect} from 'dva'
 import {createForm} from 'rc-form'
 
@@ -7,7 +7,7 @@ let id = 0;
 
 class LimitEarn extends React.Component{
     render(){
-        const {code,visible,inputs,hide,form,submit,data} = this.props;
+        const {code,visible,inputs,hide,form,submit,list} = this.props;
         return(
             <Modal
                 popup
@@ -15,13 +15,13 @@ class LimitEarn extends React.Component{
                 onClose={hide}
                 animationType="slide-up"
             >
-                <List renderHeader={() => <div>
-                    止损止盈({code} × {data.qty}手)
+                <List
+                    renderHeader={() => <div>
+                    止损止盈({code})
                 </div>} className="popup-list">
                     {inputs.map((i, index) => (
                             <InputItem
                                 {...form.getFieldProps(i.name,{
-                                    initialValue:i.value
                                     // rules: [{
                                     //     required: true, message: i.placeholder,
                                     // }],
@@ -43,9 +43,9 @@ class LimitEarn extends React.Component{
 
 const mapStateToProps = state => ({
     code:state.limits.code,
-    visible:state.limits.limit_earn.visible,
+    visible:state.limits.limit_earn.visibleAdd,
     inputs:state.limits.limit_earn.inputs,
-    data:state.limits.limit_earn.data
+    list:state.limits.list
 })
 
 const mapDispatchToProps = (dispatch,props) => ({
@@ -55,7 +55,7 @@ const mapDispatchToProps = (dispatch,props) => ({
                 let value = props.form.getFieldsValue();
                 dispatch({
                     ...value,
-                    type:'limits/modify',
+                    type:'limits/add',
                 })
             } else {
                 const errors = Object.values(error);

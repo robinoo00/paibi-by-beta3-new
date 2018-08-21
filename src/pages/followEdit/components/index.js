@@ -8,6 +8,7 @@ import Direct from './direct'
 import Nums from './nums'
 import {Flex} from 'antd-mobile'
 import React from 'react'
+import router from 'umi/router'
 
 class Edit extends React.Component{
     componentWillUnmount(){
@@ -22,7 +23,9 @@ class Edit extends React.Component{
                     title={'编辑跟随'}
                     rightText={rest.edit ? <span onClick={rest.remove(rest.nickname)}>取消跟随</span> : ''}
                 />
-                <div styleName="tip">
+                <div styleName="tip" onClick={() =>{
+                    router.push('leadersAgreeMent')
+                }}>
                     选择跟随之前请仔细阅读<span styleName="agreement">《跟随协议》</span>
                 </div>
                 <div styleName="action">

@@ -1,6 +1,6 @@
 export default {
     server:'http://106.14.126.147:1007/api/',
-    UN_SHOW_LOADING_URLS:['gettpsllist','holding','order','holdingcoms','login','register','chujin'],//单独设置的加载回调接口（其它的都会使用通用加载动画）
+    UN_SHOW_LOADING_URLS:['getinfo','gettpsllist','holding','order','holdingcoms','login','register','chujin'],//单独设置的加载回调接口（其它的都会使用通用加载动画）
     KEY:'key',
     CID:'cid',
     K_DATA_LIST:'k_data_list',//首页列表session数据

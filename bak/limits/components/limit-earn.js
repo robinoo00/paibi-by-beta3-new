@@ -2,12 +2,24 @@ import React from 'react'
 import {Modal, List, Button,InputItem,Toast} from 'antd-mobile'
 import {connect} from 'dva'
 import {createForm} from 'rc-form'
+import router from 'umi/router'
 
 let id = 0;
 
 class LimitEarn extends React.Component{
+    componentDidMount(){
+        const {getList} = this.props;
+        id = setInterval(() => {
+            getList()
+        },1000)
+    }
+    componentWillUnmount(){
+        const {hide} = this.props;
+        clearInterval(id);
+        hide();
+    }
     render(){
-        const {code,visible,inputs,hide,form,submit,data} = this.props;
+        const {data,visible,inputs,hide,form,submit} = this.props;
         return(
             <Modal
                 popup
@@ -16,12 +28,14 @@ class LimitEarn extends React.Component{
                 animationType="slide-up"
             >
                 <List renderHeader={() => <div>
-                    止损止盈({code} × {data.qty}手)
+                    止损止盈({data.合约})
+                    <span style={{float:'right'}} onClick={() => {
+                        router.push({pathname:'limits',query:{code:data.Symbol}})
+                    }}>记录</span>
                 </div>} className="popup-list">
                     {inputs.map((i, index) => (
                             <InputItem
                                 {...form.getFieldProps(i.name,{
-                                    initialValue:i.value
                                     // rules: [{
                                     //     required: true, message: i.placeholder,
                                     // }],
@@ -42,10 +56,9 @@ class LimitEarn extends React.Component{
 }
 
 const mapStateToProps = state => ({
-    code:state.limits.code,
+    data:state.limits.limit_earn.data,
     visible:state.limits.limit_earn.visible,
-    inputs:state.limits.limit_earn.inputs,
-    data:state.limits.limit_earn.data
+    inputs:state.limits.limit_earn.inputs
 })
 
 const mapDispatchToProps = (dispatch,props) => ({
@@ -53,6 +66,7 @@ const mapDispatchToProps = (dispatch,props) => ({
         props.form.validateFields({force: true}, (error) => {
             if (!error) {
                 let value = props.form.getFieldsValue();
+                console.log(value);
                 dispatch({
                     ...value,
                     type:'limits/modify',
@@ -66,6 +80,11 @@ const mapDispatchToProps = (dispatch,props) => ({
     hide: () => {
         dispatch({
             type:'limits/hideLimitEarn'
+        })
+    },
+    getList: () => {
+        dispatch({
+            type:'limits/getList'
         })
     }
 })

@@ -1,12 +1,16 @@
 //滚动加载
+let temp = null;
 export function scrollLoadMore(callback) {
     setTimeout(() => {
-        window.addEventListener('scroll', () => {loadMore(callback)})
+        // window.addEventListener('scroll', () => {loadMore(callback)})
+        temp = () => {loadMore(callback)};
+        window.addEventListener('scroll', temp)
     }, 200)
 }
 //取消滚动监听
 export function removeScrollListener() {
-    window.removeEventListener('scroll',loadMore);
+    // window.removeEventListener('scroll',loadMore);
+    window.removeEventListener('scroll',temp);
 }
 //滚动加载
 function loadMore(callback) {

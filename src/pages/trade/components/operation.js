@@ -6,7 +6,7 @@ import {Flex} from 'antd-mobile'
 const Operation = ({...rest}) => {
     return (
         <Flex style={{padding:'.1rem'}}>
-            <Flex.Item>
+            <Flex.Item className={'trade-num-btn'}>
                 <Flex styleName="num-choose">
                     <Flex.Item>
                         <div styleName="del-item" onClick={rest.delNum(rest.num)}>-</div>

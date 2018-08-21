@@ -78,10 +78,10 @@ export default {
             const id = yield select(state => state.leaderDetail.id);
             if (id != 0) {
                 const {data} = yield call(LeaderDetailServices.getCurrentTrade, {tid: id});
-                if (data && data.data.length != 0) {
+                if (data && data.length != 0) {
                     yield put({
                         type:'assignCurrent',
-                        data:data.data
+                        data:data
                     })
                 }
             }

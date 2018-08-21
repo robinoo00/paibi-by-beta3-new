@@ -19,15 +19,6 @@ export function cancel(values){
         body:values
     })
 }
-export function add(values){
-    return request(config.server + 'addtpsi',{
-        method:'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-        },
-        body:values
-    })
-}
 export function modify(values){
     return request(config.server + 'tpslmodify',{
         method:'POST',

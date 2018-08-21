@@ -42,16 +42,16 @@ class Item extends React.Component{
                     </Flex.Item>
                     <Flex.Item>
                         <p styleName="earnings-num" className={item.赢亏比列 > 0 ? "up-color" : "down-color"}>
-                            {item.赢亏比列}
+                            {item.跟随人数}
                         </p>
                         <p styleName="earnings-list-txt">
-                            盈亏比例
+                            跟随人数
                         </p>
                     </Flex.Item>
                     {item.是否被跟随 === "false" ? <Flex.Item style={{marginTop:0}} onClick={(e) => {e.stopPropagation();router.push({pathname:'followEdit',query:{id:item.ID,nickname:item.昵称,from:config.FOLLOW_TYPE_ADD}})}}>
                         <span styleName="follow-btn">跟随</span>
                     </Flex.Item> : <Flex.Item style={{marginTop:0}} onClick={(e) => {e.stopPropagation();router.push({pathname:'followEdit',query:{fid:item.跟随id,nickname:item.昵称,from:config.FOLLOW_TYPE_EDIT}})}}>
-                        <span styleName="follow-btn">编辑</span>
+                        <span styleName="follow-btn" style={{color:'#fb1',borderColor:'#fb1'}}>编辑</span>
                     </Flex.Item>}
                 </Flex>
             </div>

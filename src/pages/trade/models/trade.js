@@ -60,7 +60,7 @@ export default {
                         type:'getPingNum'
                     })
                     if(data.信息.length > 4){
-                        Modal.alert('止损止盈',data.信息,[
+                        Modal.alert('提示',data.信息,[
                             {text:'我已知晓',onPress:() => {
 
                             }}

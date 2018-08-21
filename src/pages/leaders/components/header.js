@@ -1,6 +1,8 @@
 import {connect} from 'dva'
 import Header from '../../../components/header/header'
 import {Picker} from 'antd-mobile'
+import router from 'umi/router'
+import React from 'react'
 
 const types = [
     {
@@ -17,29 +19,46 @@ const types = [
     },
 ];
 
-const LeadersHeader = ({...rest}) => (
-    <Header
-        title={<div>
-            <Picker
-                data={types}
-                cols={1}
-                onOk={rest.assignTypeChoose}
-                onDismiss={e => console.log('dismiss', e)}
-            >
-                <div>
-                    高手榜单<span style={{color:'#fb1'}}>({rest.type_choose})</span>
-                </div>
-            </Picker>
-        </div>}
-    />
-)
+class LeadersHeader extends React.Component{
+    componentDidMount(){
+        const {getPersonalInfo} = this.props;
+        getPersonalInfo();
+    }
+    render(){
+        const {...rest} = this.props;
+        return(
+            <Header
+                title={<div>
+                    <Picker
+                        data={types}
+                        cols={1}
+                        onOk={rest.assignTypeChoose}
+                        onDismiss={e => console.log('dismiss', e)}
+                    >
+                        <div>
+                            高手榜单<span style={{color:'#fb1'}}>({rest.type_choose})</span>
+                        </div>
+                    </Picker>
+                </div>}
+                rightText={<div onClick={() => router.push('followList')} style={{paddingTop:0}}>已跟随({rest.follow_num})</div>}
+            />
+
+        )
+    }
+}
 
 const mapStateToProps = state => ({
     tabs:state.leaders.tabs,
     type_choose:state.leaders.type_choose,
+    follow_num:state.personal.info.跟随人数
 })
 
 const mapDispatchToProps = dispatch => ({
+    getPersonalInfo: () => {
+        dispatch({
+            type:'personal/getInfo'
+        })
+    },
     assignTypeChoose:(e) => {
         console.log('ok', e[0])
         dispatch({

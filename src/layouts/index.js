@@ -60,20 +60,13 @@ class Layout extends React.Component{
         const { HasFooterPages } = config;
         // const has_foot = pathname === '/news' || pathname === '/discover' || pathname === '/personal';
         return (
-            <ReactCSSTransitionGroup
-                component="div"
-                transitionName="page"
-                transitionEnterTimeout={200}
-                transitionLeaveTimeout={200}
-            >
-                <div key={pathname} className={pathname}>
-                    <div>
-                        {children}
-                    </div>
-                    {HasFooterPages && HasFooterPages.includes(pathname) ? <Footer/> : ''}
-                    {/*{has_foot ? <Footer/> : ''}*/}
+            <div>
+                <div>
+                    {children}
                 </div>
-            </ReactCSSTransitionGroup>
+                {HasFooterPages && HasFooterPages.includes(pathname) ? <Footer/> : ''}
+                {/*{has_foot ? <Footer/> : ''}*/}
+            </div>
         );
     }
 }

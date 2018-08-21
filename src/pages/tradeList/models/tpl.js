@@ -64,6 +64,11 @@ export default {
             nomore: false,
             empty: false
         },
+        ping_modal: {
+            item:{},
+            show:false,
+            num:0,//平仓数量（所有合约公用，点击平仓，+，-，时赋值）
+        },
         limit_earn: {
             inputs:[
                 {
@@ -112,24 +117,33 @@ export default {
             }
         },
         * ping({direction, code}, {put, call, select}) {
-            const {data} = yield call(TradeListServices.getOffect, {symbol: code});
-            if (data) {
-                if (data.手数 === 0) {
-                    window.toast('还未持仓');
-                    Toast.hide();
-                } else {
-                    yield put({
-                        type: 'order',
-                        direction: direction === 0 ? "卖出" : "买入",
-                        num: data.手数,
-                        code: code
-                    })
-                }
-            } else {
-                Toast.info('交易失败');
-                Toast.hide();
-            }
-
+            const num = yield select(state => state.tradeList.ping_modal.num);
+            yield put({
+                type: 'order',
+                direction: direction === 0 ? "卖出" : "买入",
+                num: num,
+                code: code
+            })
+            // const {data} = yield call(TradeListServices.getOffect, {symbol: code});
+            // if (data) {
+            //     if (data.手数 === 0) {
+            //         window.toast('还未持仓');
+            //         Toast.hide();
+            //     } else {
+            //         yield put({
+            //             type: 'order',
+            //             direction: direction === 0 ? "卖出" : "买入",
+            //             num: data.手数,
+            //             code: code
+            //         })
+            //     }
+            // } else {
+            //     Toast.info('交易失败');
+            //     Toast.hide();
+            // }
+            yield put({
+                type:'hidePingModal'
+            })
         },
         * getList({page = 1}, {call, put, select}) {
             const tabs = yield select(state => state.tradeList.tabs);
@@ -206,7 +220,8 @@ export default {
             const {data} = yield call(TradeListServices.limitEarn,post_data)
             console.log(data);
             if(data){
-                Toast.info(data.信息,1);
+                window.toast(data.信息);
+                // Toast.info(data.信息,1);
             }
         }
     },
@@ -222,6 +237,11 @@ export default {
             let position_list = state.position_list;
             position_list['list'] = data;
             position_list['nomore'] = true;
+            if(data.length === 0){
+                position_list['empty'] = true;
+            }else{
+                position_list['empty'] = false;
+            }
             return {
                 ...state,
                 position_list: position_list
@@ -255,8 +275,9 @@ export default {
             let nomore = false, empty = false;
             if (data.length === 0) {
                 empty = true;
+                nomore = true;
             }
-            if (data.length === 0 || data.length < pageSize) {
+            if (data.length < pageSize) {
                 nomore = true;
             }
             //如果是持仓单独处理
@@ -321,6 +342,41 @@ export default {
                 limit_earn:{
                     ...state.limit_earn,
                     visible:false
+                }
+            }
+        },
+        assignPingNum(state,{num}){
+            if(num > state.ping_modal.item.数量 || num < 1){
+                return{
+                    ...state
+                }
+            }
+            return {
+                ...state,
+                ping_modal: {
+                    ...state.ping_modal,
+                    num:num,
+                }
+            }
+        },
+        showPingModal(state,{item}){
+            return {
+                ...state,
+                ping_modal: {
+                    item:item,
+                    num:item.数量,
+                    show:true
+                }
+            }
+        },
+        hidePingModal(state){
+            return {
+                ...state,
+                ping_modal: {
+                    ...state.ping_modal,
+                    item:{},
+                    num: 0,
+                    show:false
                 }
             }
         }

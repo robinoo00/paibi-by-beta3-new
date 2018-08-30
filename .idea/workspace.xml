@@ -3,6 +3,299 @@
   <component name="ChangeListManager">
     <list default="true" id="0ecd7307-cedf-40b7-a13f-c55ab0af323e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/components/logo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/styles/logo.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/images/1客户须知.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/images/2担保合作协议.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/images/3风险提示书.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/images/4投资顾问书.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/images/5客户确认书.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/agreement/styles/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bankEdit/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bankEdit/models/bankEdit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bankEdit/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bankEdit/services/bankEdit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/bankEdit/styles/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/banks/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/banks/components/item.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/banks/images/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/banks/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/banks/styles/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/components/charge.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/components/nav.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/components/otc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/models/charge.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/styles/nav.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/charge/styles/otc.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/components/direct.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/components/nums.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/components/ways.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/models/followEdit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/services/followEdit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followEdit/styles/edit.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/components/follow-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/components/item.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/components/unfollow-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/models/followList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/services/followList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/styles/follow-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/followList/styles/unfollow-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/components/nav.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/styles/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fund/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/guide/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/guide/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/guide/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/guide/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/guide/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/images/icon-tel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/help/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/images/icon-tel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpAsk/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/images/icon-tel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpCenter/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/images/icon-tel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/helpDetail/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/introduce/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/introduce/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/introduce/services/introduce.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/component/base.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/component/draw.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/component/k.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/models/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/k/styles/k.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/models/knowledge.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/services/konwledge.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/knowledge/styles/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/chart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/current-trade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/data-chart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/data-item.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/info.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/total-data.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/components/trade-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/images/BJ@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/models/leaderDetail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/services/leaderDetail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/data-chart.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/data-item.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/info.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/total-data.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaderDetail/styles/trade-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/header.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/item.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/leaders.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/nav.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/components/tabs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/models/leaders.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/services/leaders.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/styles/item.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leaders/styles/nav.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leadersAgreeMent/images/agree.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/leadersAgreeMent/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/footer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/header.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/limit-earn-add.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/limit-earn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/models/limits.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/services/limits.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/styles/footer.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/limits/styles/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/images/qrcode.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/models/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/services/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/styles/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfo/components/myinfo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfo/images/icon-head.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfo/models/personal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfo/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfo/styles/myinfo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfoModify/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfoModify/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfoModify/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfoModify/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myInfoModify/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/components/news.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/models/news.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/services/news.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/styles/news.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/components/detail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/models/newsDetail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/services/newsDetail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsDetail/styles/detail.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/components/alipay.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/components/payunion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/images/icon-bank-cmb.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/images/qrcode.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pay/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/components/menu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/images/alipay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/images/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/images/unionpay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/models/example.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/payType/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/components/header.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/components/links.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/components/manager.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/components/money.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/components/personal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/bg1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/bg2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/icon6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/kefu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/images/person.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/models/personal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/services/personal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/styles/header.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/styles/links.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/styles/manager.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/personal/styles/money.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/agreement.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/bak.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/item-area.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/item-basic.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/item-code.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/item-pic.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/components/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/images/agreement.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/images/tp1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/images/tp2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/images/tp3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/images/tp4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/models/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/services/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/styles/agreement.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/styles/form.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/styles/register.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/images/bj@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/images/content@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/images/qq.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/images/wx.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/service/styles/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/Kmap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/btns.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/detail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/header.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/operation.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/price.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/components/trade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/images/tip.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/models/trade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/services/trade.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/styles/btns.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/trade/styles/trade.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/deal-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/empty.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/header.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/history-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/limit-earn.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/ping-check-alert.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/ping-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/position-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/tabs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/components/undeal-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/images/icon-arrow-l.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/images/nothing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/empty.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/header.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/ping-check-alert.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/ping-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/position-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/tpl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeList/styles/undeal-list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-(F)DAX.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-CL.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-ES.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-GC.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-HG.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-HHI.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-HSI.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-MHI.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-NG.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-NQ.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule-Si.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/components/rule_bak.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tradeRule/styles/rule.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/withdraw/components/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/withdraw/models/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/withdraw/page.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/withdraw/services/tpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/pages/withdraw/styles/tpl.css" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,53 +309,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="umi.4fdc7edb.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/static/umi.4fdc7edb.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2875">
-              <caret line="0" column="127848" lean-forward="false" selection-start-line="0" selection-start-column="127848" selection-end-line="0" selection-end-column="127848" />
+            <state relative-caret-position="0">
+              <caret line="0" column="211" lean-forward="false" selection-start-line="0" selection-start-column="211" selection-end-line="0" selection-end-column="211" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leaders.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/leaders/models/leaders.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3000">
-              <caret line="120" column="94" lean-forward="false" selection-start-line="120" selection-start-column="94" selection-end-line="120" selection-end-column="109" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leaders.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/leaders/services/leaders.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layouts/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/leaders/components/tabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="27" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/payType/components/menu.js">
+      <file leaf-file-name="money.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/personal/components/money.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="29" column="96" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="96" />
+            <state relative-caret-position="250">
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -70,18 +343,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="umi.6b2a3364.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/static/umi.6b2a3364.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="2900">
+              <caret line="0" column="127855" lean-forward="false" selection-start-line="0" selection-start-column="127849" selection-end-line="0" selection-end-column="127855" />
+              <folding>
+                <element signature="e#12120#12425#2" expanded="true" />
+                <element signature="e#28169#28391#2" expanded="true" />
+                <element signature="e#35078#36197#2" expanded="true" />
+                <element signature="e#36236#38747#2" expanded="true" />
+                <element signature="e#38779#40382#2" expanded="true" />
+                <element signature="e#40421#43424#2" expanded="true" />
+                <element signature="e#43459#45058#2" expanded="true" />
+                <element signature="e#45094#46097#2" expanded="true" />
+                <element signature="e#46140#48735#2" expanded="true" />
+                <element signature="e#49833#50580#1" expanded="true" />
+                <element signature="e#55771#56444#2" expanded="true" />
+                <element signature="e#90881#91613#2" expanded="true" />
+                <element signature="e#91793#92726#2" expanded="true" />
+                <element signature="e#95379#95665#2" expanded="true" />
+                <element signature="e#96231#96977#2" expanded="true" />
+                <element signature="e#103404#103626#2" expanded="true" />
+                <element signature="e#106686#107180#2" expanded="true" />
+                <element signature="e#115772#117611#2" expanded="true" />
+                <element signature="e#117684#119327#2" expanded="true" />
+                <element signature="e#119400#121087#2" expanded="true" />
+                <element signature="e#121160#123087#2" expanded="true" />
+                <element signature="e#141820#142567#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".eslintrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <file leaf-file-name="service-worker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/service-worker.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -90,33 +396,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="document.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="document.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/document.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="175">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/request.js">
+      <file leaf-file-name="limits.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/limits/models/limits.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="5225">
+              <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="limits.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/limits/services/limits.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="limits.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bak/src/pages/limits/models/limits.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="15" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,9 +452,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>系统异常</find>
-      <find>止损止盈</find>
-      <find>position_list</find>
       <find>nomore</find>
       <find>pageSize</find>
       <find>empty</find>
@@ -159,11 +474,14 @@
       <find>let loading = false;</find>
       <find>loading</find>
       <find>page</find>
-      <find>cancelLimit</find>
       <find>showLimitEarn</find>
       <find>modify</find>
       <find>list</find>
+      <find>Loading</find>
+      <find>getUserInfo</find>
+      <find>cancelLimit</find>
       <find>static</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>styleName</replace>
@@ -189,19 +507,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/leaderDetail/components/index.js" />
-        <option value="$PROJECT_DIR$/dist/static/umi.5f36021a.css" />
-        <option value="$PROJECT_DIR$/src/pages/tradeList/styles/undeal-list.less" />
-        <option value="$PROJECT_DIR$/src/pages/tradeList/components/undeal-list.js" />
-        <option value="$PROJECT_DIR$/src/pages/tradeList/components/list.js" />
         <option value="$PROJECT_DIR$/dist/static/umi.8d474907.css" />
         <option value="$PROJECT_DIR$/src/pages/tradeList/services/tpl.js" />
         <option value="$PROJECT_DIR$/src/pages/tradeList/components/header.js" />
         <option value="$PROJECT_DIR$/src/pages/pay/components/alipay.js" />
-        <option value="$PROJECT_DIR$/src/pages/limits/page.js" />
         <option value="$PROJECT_DIR$/src/pages/fund/models/tpl.js" />
         <option value="$PROJECT_DIR$/src/pages/limits/styles/list.less" />
-        <option value="$PROJECT_DIR$/src/pages/home/components/market.js" />
         <option value="$PROJECT_DIR$/src/pages/tradeList/components/limit-earn.js" />
         <option value="$PROJECT_DIR$/src/pages/leaders/components/tabs.js" />
         <option value="$PROJECT_DIR$/dist/static/umi.298ec6e3.css" />
@@ -211,7 +522,6 @@
         <option value="$PROJECT_DIR$/dist/static/umi.6a59cf31.css" />
         <option value="$PROJECT_DIR$/dist/static/umi.2434fe35.css" />
         <option value="$PROJECT_DIR$/src/pages/trade/components/operation.js" />
-        <option value="$PROJECT_DIR$/src/global.css" />
         <option value="$PROJECT_DIR$/src/pages/tradeList/styles/ping-check-alert.less" />
         <option value="$PROJECT_DIR$/src/pages/trade/models/trade.js" />
         <option value="$PROJECT_DIR$/src/pages/leaders/components/item.js" />
@@ -234,12 +544,20 @@
         <option value="$PROJECT_DIR$/bak/limits/models/limits.js" />
         <option value="$PROJECT_DIR$/src/pages/limits/components/footer.js" />
         <option value="$PROJECT_DIR$/src/pages/limits/components/list.js" />
-        <option value="$PROJECT_DIR$/src/pages/limits/models/limits.js" />
         <option value="$PROJECT_DIR$/src/pages/limits/components/limit-earn.js" />
         <option value="$PROJECT_DIR$/src/pages/tradeList/components/position-list.js" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/dist/static/umi.4fdc7edb.css" />
         <option value="$PROJECT_DIR$/src/pages/leaders/models/leaders.js" />
+        <option value="$PROJECT_DIR$/src/pages/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/home/components/header.js" />
+        <option value="$PROJECT_DIR$/src/pages/home/components/market.js" />
+        <option value="$PROJECT_DIR$/src/global.css" />
+        <option value="$PROJECT_DIR$/src/pages/myInfo/components/myinfo.js" />
+        <option value="$PROJECT_DIR$/src/pages/limits/page.js" />
+        <option value="$PROJECT_DIR$/src/pages/limits/models/limits.js" />
+        <option value="$PROJECT_DIR$/dist/static/umi.4fdc7edb.css" />
+        <option value="$PROJECT_DIR$/dist/static/umi.6b2a3364.css" />
+        <option value="$PROJECT_DIR$/src/pages/document.ejs" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
       </list>
     </option>
   </component>
@@ -300,7 +618,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,11 +626,42 @@
               <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
               <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paibi-by-beta3-new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paibi-by-beta3-new" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,16 +677,16 @@
     <property name="node.js.detected.package.eslint" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages" />
-      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\bak" />
-      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\leadersAgreeMent\images" />
-      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\limits\components" />
-      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\tradeRule\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\banks" />
       <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\banks\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\limits\services" />
+      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\limits\models" />
+      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages\limits" />
+      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\pages" />
+      <recent name="D:\workspace\react-project\hdl-projects\paibi-by-beta3-new\src\utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -375,17 +724,20 @@
       <workItem from="1533543404194" duration="715000" />
       <workItem from="1533608421545" duration="8546000" />
       <workItem from="1534144217978" duration="2919000" />
-      <workItem from="1534984738845" duration="1214000" />
+      <workItem from="1534984738845" duration="5434000" />
+      <workItem from="1534991372586" duration="22000" />
+      <workItem from="1535421268940" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138897000" />
+    <option name="totallyTimeSpent" value="143160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="353" y="48" width="1463" height="964" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19488597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19281271" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -424,162 +776,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/followList/components/item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaders/components/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="94" lean-forward="false" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/static/umi.85ae3cff.css" />
-    <entry file="file://$PROJECT_DIR$/src/pages/tradeList/styles/position-list.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/tradeList/components/limit-earn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="96" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/loading-nomore/bottom-tip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/services/leaderDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/trade-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/data-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/current-trade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/models/leaderDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaderDetail/components/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="23" column="101" lean-forward="false" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/static/umi.b6e579da.css" />
-    <entry file="file://$PROJECT_DIR$/src/layouts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="57" column="47" lean-forward="false" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaders/components/leaders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaders/components/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaders/components/item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/limits/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/tradeList/components/ping-check-alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="112" column="33" lean-forward="false" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bak/limits/components/limit-earn.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-600">
@@ -591,13 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="117" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/limits/services/limits.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -629,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/limits/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/limits/components/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -664,20 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/limits/components/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="118" column="10" lean-forward="false" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/limits/models/limits.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/limits/components/limit-earn.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -692,45 +860,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/static/umi.4fdc7edb.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="0" column="127848" lean-forward="false" selection-start-line="0" selection-start-column="127848" selection-end-line="0" selection-end-column="127848" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/leaders/models/leaders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="120" column="94" lean-forward="false" selection-start-line="120" selection-start-column="94" selection-end-line="120" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/leaders/services/leaders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,9 +871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -748,9 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="29" column="96" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,15 +902,270 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/src/pages/document.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/src/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/models/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/components/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/components/leader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/components/market.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/button/button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/src/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/myInfo/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/myInfo/components/myinfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/personal/models/personal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/introduce/models/tpl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/k/models/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/knowledge/models/knowledge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/leaders/models/leaders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="120" column="94" lean-forward="false" selection-start-line="120" selection-start-column="94" selection-end-line="120" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/limits/components/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="118" column="10" lean-forward="false" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/limits/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/limits/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/src/pages/limits/models/limits.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/limits/services/limits.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/limits/models/limits.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5225">
+          <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/static/umi.4fdc7edb.css" />
+    <entry file="file://$PROJECT_DIR$/src/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/test/page.js" />
+    <entry file="file://$PROJECT_DIR$/dist/static/umi.6b2a3364.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2900">
+          <caret line="0" column="127855" lean-forward="false" selection-start-line="0" selection-start-column="127849" selection-end-line="0" selection-end-column="127855" />
+          <folding>
+            <element signature="e#12120#12425#2" expanded="true" />
+            <element signature="e#28169#28391#2" expanded="true" />
+            <element signature="e#35078#36197#2" expanded="true" />
+            <element signature="e#36236#38747#2" expanded="true" />
+            <element signature="e#38779#40382#2" expanded="true" />
+            <element signature="e#40421#43424#2" expanded="true" />
+            <element signature="e#43459#45058#2" expanded="true" />
+            <element signature="e#45094#46097#2" expanded="true" />
+            <element signature="e#46140#48735#2" expanded="true" />
+            <element signature="e#49833#50580#1" expanded="true" />
+            <element signature="e#55771#56444#2" expanded="true" />
+            <element signature="e#90881#91613#2" expanded="true" />
+            <element signature="e#91793#92726#2" expanded="true" />
+            <element signature="e#95379#95665#2" expanded="true" />
+            <element signature="e#96231#96977#2" expanded="true" />
+            <element signature="e#103404#103626#2" expanded="true" />
+            <element signature="e#106686#107180#2" expanded="true" />
+            <element signature="e#115772#117611#2" expanded="true" />
+            <element signature="e#117684#119327#2" expanded="true" />
+            <element signature="e#119400#121087#2" expanded="true" />
+            <element signature="e#121160#123087#2" expanded="true" />
+            <element signature="e#141820#142567#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/document.ejs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/service-worker.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="211" lean-forward="false" selection-start-line="0" selection-start-column="211" selection-end-line="0" selection-end-column="211" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/personal/components/money.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

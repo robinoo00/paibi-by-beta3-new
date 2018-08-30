@@ -207,18 +207,6 @@ export default {
                 }
             }
         },
-        cancelLimit(state, {id}) {
-            const list = state.list;
-            for (let index in list) {
-                if (list[index]['id'] === id) {
-                    list.splice(index, 1);
-                }
-            }
-            return {
-                ...state,
-                list: [...list]
-            }
-        },
         assignCode(state, {code}) {
             return {
                 ...state,

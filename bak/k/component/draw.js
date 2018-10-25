@@ -69,44 +69,35 @@ class Init extends Base {
             self.kuanjia();
             self.第一次加载数据 = true;
             self.数据长度 = self.分时数据.length;
-            // window.setTimeout(function () {
-            //     if(self.最后一柱){
-            //         work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
-            //     }
-            // }, 500);
+            window.setTimeout(function () {
+                if(self.最后一柱){
+                    work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                }
+            }, 500);
         } else {
             if (data.length == 0) {
                 return;
-            };
+            }
+            ;
             if (data.length == 1) {
                 self.分时数据[self.分时数据.length - 1]["收盘"] = data[0]["现价"] == 0 ? self.分时数据[self.分时数据.length - 1]["收盘"] : data[0]["现价"];
             } else if (data.length > 1) {
                 var 差 = data.length - 1;
-                data.forEach((item,i) => {
-                    if(data[i+1]){
-                        if(item['结束时间'] === data[i+1]['结束时间']){
-                            差 -=1
-                        }
-                    }
-                })
                 self.开始条数 += 差;
                 self.结束条数 += 差;
                 self.分时数据[self.分时数据.length - 1]["收盘"] = self.分时数据[self.分时数据.length - 1]["存收"];
                 for (var i = 0; i < data.length; i++) {
                     if (i > 0) {
-                        if(self.分时数据[self.分时数据.length - 1]['时间'] != data[i]['结束时间']){
-                            // console.log(data[i])
-                            self.分时数据.push({
-                                市价: data[i]["现价"],
-                                时间: data[i]["结束时间"],
-                                开盘: Number(data[i]["开仓"]),
-                                收盘: Number(data[i]["收盘"]),
-                                最高: Number(data[i]["最高"]),
-                                最低: Number(data[i]["最低"]),
-                                量: Number(data[i]["量"]),
-                                存收: Number(data[i]["收盘"])
-                            });
-                        }
+                        self.分时数据.push({
+                            市价: data[i]["现价"],
+                            时间: data[i]["结束时间"],
+                            开盘: Number(data[i]["开仓"]),
+                            收盘: Number(data[i]["收盘"]),
+                            最高: Number(data[i]["最高"]),
+                            最低: Number(data[i]["最低"]),
+                            量: Number(data[i]["量"]),
+                            存收: Number(data[i]["收盘"])
+                        });
                     }
                 }
             }
@@ -119,11 +110,11 @@ class Init extends Base {
             ;
             self.第一次加载数据 = true;
             self.数据长度 = self.分时数据.length;
-            // window.setTimeout(function () {
-            //     if(self.最后一柱){
-            //         work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
-            //     }
-            // }, 500)
+            window.setTimeout(function () {
+                if(self.最后一柱){
+                    work.server.k线(self.代码, self.类型, self.最后一柱.结束时间);
+                }
+            }, 500)
         }
     }
     kuanjia() {
@@ -181,16 +172,14 @@ class Init extends Base {
                 self.新MACD.push(self.MACD[i]);
             }
             ;
-            // console.log(self.新数组)
             self.计算数据 = self.getlendata(self.新数组);
-            // console.log(self.新数组)
             kd = (self.K线区宽度 - self.左边距 - self.左线边距 - self.右边距) / self.K线显示柱条数;
             self.高度价格比列 = (self.K线区高度 - self.底边距 - self.上边距) / Math.abs(self.计算数据.最大值 - self.计算数据.最小值);
 
             var c1 = "", c2 = "";
             c1 = self.分时刻度文字颜色;
             c2 = self.分时刻度文字颜色;
-            //绘制分时刻度线
+
             self.画布上下文.strokeStyle = self.分时刻度颜色;
             self.画布上下文.beginPath();
             self.画布上下文.moveTo(self.左边距 + self.左线边距, self.上边距);
@@ -228,13 +217,11 @@ class Init extends Base {
                     self.画布上下文.save();
                 }
             }
-            //绘制底部柱图
             for (var i = 0; i < self.新数组.length; i++) {
                 var itm = self.新数组[i];
                 var c = Math.floor(self.新数组.length / 6);
                 self.画布上下文.fillStyle = self.分时刻度文字颜色;
                 self.画布上下文.strokeStyle = self.分时刻度颜色;
-                //绘制时间
                 if (i > 0 && i % 20 == 0) {
                     var x = (i * (self.k线柱宽度 + self.k线柱间隔) + self.左边距 + self.左线边距) - 40;
                     var xxx = i * (self.k线柱宽度 + self.k线柱间隔) + self.左边距 + self.左线边距;
@@ -254,7 +241,6 @@ class Init extends Base {
                 }
                 var k线柱颜色 = itm.开盘 > itm.收盘 ? self.K柱阴颜色 : (itm.开盘 == itm.收盘 ? self.K柱阴颜色 : self.K柱阳颜色);
                 self.画布上下文.fillStyle = k线柱颜色;
-                //K线柱图
                 if (self.类型 != "分时") {
                     var k线柱颜色 = itm.开盘 > itm.收盘 ? self.K柱阴颜色 : (itm.开盘 == itm.收盘 ? self.K柱阴颜色 : self.K柱阳颜色);
                     var k线柱高度 = 0.5;
@@ -304,12 +290,12 @@ class Init extends Base {
         }
         ;
 
-        // 分时 K线
+
         if (self.类型 == "分时") {
             for (var i = 0; i < 收盘价.length; i++) {
                 self.均线.push(Number(self.junjia(收盘价, i + 1)));
             }
-            //分时橙线
+            ;
             self.画布上下文.strokeStyle = '#ff5400';
             for (var i = 0; i < self.均线.length; i++) {
                 if (i > 0) {
@@ -325,7 +311,7 @@ class Init extends Base {
                 }
             }
             ;
-            //分时白线
+
             for (var i = 0; i < self.新数组.length; i++) {
                 self.画布上下文.strokeStyle = "#ffffff";
                 if (i < self.新数组.length && i > 0) {
@@ -342,7 +328,6 @@ class Init extends Base {
             }
 
         }
-        // 非分时 K线
         if (self.类型 != "分时") {
             self.画布上下文.strokeStyle = self.M5颜色;
             for (var i = 0; i < self.M5.length; i++) {
@@ -397,7 +382,6 @@ class Init extends Base {
         var ab = self.macd计算.最小值 < 0 ? Math.abs(self.macd计算.最小值) + self.macd计算.最大值 : self.macd计算.最大值 - self.macd计算.最小值
         self.MACD高度价格比列 = self.MACD区高度 / Math.abs(ab);
         self.BAR高度价格比列 = self.MACD区高度 / 2 / self.macd计算.BAR最大值;
-        //底部上部分柱图
         for (var i = 0; i < self.新MACD.length; i++) {
             var itm = self.新MACD[i];
             if (i > 0) {
@@ -447,9 +431,9 @@ class Init extends Base {
         }
 
 
-        // self.画布上下文.fillStyle = '#fff';
-        // self.画布上下文.font = "50px sans-serif";
-        // self.画布上下文.fillText(self.市价, self.左边距 + self.左线边距 + 80, 50);
+        self.画布上下文.fillStyle = '#fff';
+        self.画布上下文.font = "50px sans-serif";
+        self.画布上下文.fillText(self.市价, self.左边距 + self.左线边距 + 80, 50);
 
 
         ///////////////////////////////////////////////////////////////////////////////

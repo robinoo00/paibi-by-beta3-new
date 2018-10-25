@@ -27,7 +27,12 @@ export default function request(url, options) {
     const key = localStorage.getItem(config.KEY);
     const cid  = localStorage.getItem(config.CID);
     const account  = localStorage.getItem(config.ACCOUNT);
-    const api = url.match(/api\/(\S*)?/)[1];
+    let api = ''
+    if(url.includes('api/api')){
+        api = url.match(/api\/api\/(\S*)\?/)[1];
+    }else{
+        api = url.match(/api\/(\S*)?/)[1];
+    }
     if(!key && api !='login' && api != 'register'){
         router.push('login');
         return {data:''};

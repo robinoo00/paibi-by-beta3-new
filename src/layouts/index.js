@@ -2,7 +2,6 @@ import React from 'react';
 import withRouter from 'umi/withRouter';
 import Footer from './footer'
 import {Toast} from 'antd-mobile'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {connect} from 'dva'
 import config from "../utils/config";
 
@@ -26,6 +25,7 @@ class Layout extends React.Component{
         }
         window.work.client.kdata = function (data) {
             const get_data = eval("(" + data + ")");
+            console.log(get_data)
             if(get_data.length != 0){
                 let get_type = get_data[0]['类型'];
                 if(window.k_type_choose === '分时' || window.k_type_choose === '1分钟'){

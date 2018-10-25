@@ -77,36 +77,27 @@ class Init extends Base {
         } else {
             if (data.length == 0) {
                 return;
-            };
+            }
+            ;
             if (data.length == 1) {
                 self.分时数据[self.分时数据.length - 1]["收盘"] = data[0]["现价"] == 0 ? self.分时数据[self.分时数据.length - 1]["收盘"] : data[0]["现价"];
             } else if (data.length > 1) {
                 var 差 = data.length - 1;
-                data.forEach((item,i) => {
-                    if(data[i+1]){
-                        if(item['结束时间'] === data[i+1]['结束时间']){
-                            差 -=1
-                        }
-                    }
-                })
                 self.开始条数 += 差;
                 self.结束条数 += 差;
                 self.分时数据[self.分时数据.length - 1]["收盘"] = self.分时数据[self.分时数据.length - 1]["存收"];
                 for (var i = 0; i < data.length; i++) {
                     if (i > 0) {
-                        if(self.分时数据[self.分时数据.length - 1]['时间'] != data[i]['结束时间']){
-                            // console.log(data[i])
-                            self.分时数据.push({
-                                市价: data[i]["现价"],
-                                时间: data[i]["结束时间"],
-                                开盘: Number(data[i]["开仓"]),
-                                收盘: Number(data[i]["收盘"]),
-                                最高: Number(data[i]["最高"]),
-                                最低: Number(data[i]["最低"]),
-                                量: Number(data[i]["量"]),
-                                存收: Number(data[i]["收盘"])
-                            });
-                        }
+                        self.分时数据.push({
+                            市价: data[i]["现价"],
+                            时间: data[i]["结束时间"],
+                            开盘: Number(data[i]["开仓"]),
+                            收盘: Number(data[i]["收盘"]),
+                            最高: Number(data[i]["最高"]),
+                            最低: Number(data[i]["最低"]),
+                            量: Number(data[i]["量"]),
+                            存收: Number(data[i]["收盘"])
+                        });
                     }
                 }
             }
